@@ -1,0 +1,51 @@
+:root {
+
+  --color-primary: #5d7658;
+  --color-primary-light: #799672;
+  --color-secondary: #d8b384;
+  --color-background: #f8f4ee;
+  --color-surface: #fffdf9;
+  --color-heading: #2f2a26;
+  --color-text: #6d665f;
+  --color-border: #ece5dc;
+  --color-success: #4b8f55;
+  --color-warning: #d59b3f;
+  --color-error: #d75a5a;
+
+  --shadow-sm: 0 8px 20px rgba(61, 42, 23, .05);
+  --shadow-md: 0 16px 40px rgba(61, 42, 23, .08);
+  --shadow-lg: 0 30px 80px rgba(61, 42, 23, .12);
+
+  --radius-sm: .5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-pill: 999rem;
+
+  --space-xs: .5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+
+  --font-body: "Inter", sans-serif;
+  --font-heading: "Cormorant Garamond", serif;
+
+  --fs-xs: .875rem;
+  --fs-sm: 1rem;
+  --fs-md: 1.25rem;
+  --fs-lg: 1.5rem;
+  --fs-xl: 2rem;
+  --fs-2xl: 3rem;
+  --fs-3xl: 4rem;
+
+  --transition: .25s ease;
+
+  --transition-default:
+    background-color .25s ease,
+    color .25s ease,
+    border-color .25s ease,
+    transform .25s ease,
+    box-shadow .25s ease;
+
+}

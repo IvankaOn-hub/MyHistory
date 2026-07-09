@@ -1,0 +1,48 @@
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--fs-md);
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 500;
+  color: var(--color-heading);
+}
+
+h1 {
+  font-size: clamp(var(--fs-2xl), 3.5vw, var(--fs-3xl));
+  line-height: 1.05;
+}
+
+h2 {
+  font-size: var(--fs-2xl);
+  line-height: 1.1;
+}
+
+h3 {
+  font-size: var(--fs-xl);
+  line-height: 1.1;
+}
+
+h4 {
+  font-size: var(--fs-md);
+  line-height: 1.1;
+}
+
+h5 {
+  font-size: var(--fs-sm);
+  line-height: 1.1;
+}
+
+p {
+  color: var(--color-text);
+}

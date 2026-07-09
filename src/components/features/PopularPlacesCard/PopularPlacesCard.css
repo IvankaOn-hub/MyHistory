@@ -1,0 +1,58 @@
+.popular-places {
+    padding: var(--space-lg);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.popular-places__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.popular-places__item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+    transition: var(--transition-default);
+}
+
+.popular-places__item:hover {
+    transform: translateX(.35rem);
+}
+
+.popular-places__image {
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.popular-places__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .45s ease;
+}
+
+.popular-places__item:hover img {
+    transform: scale(1.1);
+}
+
+.popular-places__content {
+    flex: 1;
+}
+
+.popular-places__city {
+    margin-bottom: .15rem;
+    font-size: var(--fs-md);
+}
+
+.popular-places__count {
+    font-size: var(--fs-sm);
+    color: var(--color-text);
+}

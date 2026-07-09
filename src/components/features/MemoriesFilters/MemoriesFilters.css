@@ -1,0 +1,30 @@
+.memories-filters {
+  display: grid;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+}
+
+.memories-filters__checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-text);
+  font-size: var(--fs-sm);
+}
+
+.memories-page__summary{
+  text-align: end;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .memories-filters {
+    grid-template-columns: 1fr 14rem auto;
+    align-items: center;
+  }
+  .memories-filters__checkbox {
+    display: inline-flex;
+    justify-content: left;
+  }
+}

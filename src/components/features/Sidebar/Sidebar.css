@@ -1,0 +1,10 @@
+
+
+.sidebar{
+    display: grid;
+    gap: var(--space-md);
+}
+
+.sidebar{
+    margin-top: 3.8rem;
+}

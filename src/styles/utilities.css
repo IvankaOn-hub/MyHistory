@@ -1,0 +1,132 @@
+.container {
+  width: min(90%, 1600px);
+  margin: 0 auto;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center{
+  justify-content: center;
+}
+
+.justify-content-end{
+  justify-content: end;
+}
+.justify-content-start{
+  justify-content: start;
+}
+
+.btn-link{
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: var(--transition-default);
+}
+
+.btn-link__outline{
+  padding: .75rem 2.25rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border: 1px solid var(--color-border);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-link__outline:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-link__edit{
+  padding: 0.75rem 1.2rem;
+  background: var(--color-surface);
+  color: var(--color-heading);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-default);
+}
+
+
+.btn-link__delete{
+  padding: 0.75rem 1.2rem;
+  background: transparent;
+  color: var(--color-error);
+  border-radius: var(--radius-md);
+  border: 1px soled var(--color-error);
+  text-decoration: none;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-default);
+}
+.btn-link__edit:hover,
+.btn-link__delete:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.dashboard {
+  display: grid;
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+@media (min-width: 1400px) {
+  .dashboard {
+    grid-template-columns: 1fr 22rem;
+    align-items: start;
+  }
+}
+
+@media (min-width: 1600px) {
+  .dashboard {
+    grid-template-columns: 1fr 27rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 48rem) {
+  .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.shadow {
+  box-shadow: var(--shadow-md);
+}
+
+.radius {
+  border-radius: var(--radius-md);
+}
