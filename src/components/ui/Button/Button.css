@@ -17,6 +17,11 @@
   font-style: italic;
 }
 
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
+}
+
 .button:hover {
   transform: translateY(-2px);
 }
@@ -30,6 +35,11 @@
   outline-offset: 3px;
 }
 
+.button--active{
+  background: var(--color-primary-light) !important;
+  color: #fff !important;
+  box-shadow: var(--shadow-sm) !important;
+}
 
 .button--primary {
   background: var(--color-primary-light);
@@ -59,6 +69,17 @@
 
 .button--outline:hover {
   background: rgba(93, 118, 88, .08);
+}
+
+.button--danger {
+  background: transparent;
+  color: var(--color-error);
+  border: 1px solid var(--color-error);
+ 
+}
+
+.button--danger:hover {
+  background: rgba(215, 90, 90, 0.08);
 }
 
 .button__icon {

@@ -10,16 +10,13 @@ function HomePage() {
     <main className="app">
       <Container>
         <Header />
-
         <Hero />
-
         <section className="dashboard">
           <Timeline />
           <Sidebar />
         </section>
-
-        <Footer />
       </Container>
+        <Footer />
     </main>
   );
 }

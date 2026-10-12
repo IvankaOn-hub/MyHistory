@@ -1,36 +1,30 @@
 import "./PopularPlacesCard.css";
-import Card from "../../ui/Card/Card";
-import zakopane from "../../../assets/images/memory-1.jpg";
-import wroclaw from "../../../assets/images/memory-2.jpg";
-import krakow from "../../../assets/images/memory-3.jpg";
-import warszawa from "../../../assets/images/memory-1.jpg";
 
-const places = [
-  {
-    id: 1,
-    image: zakopane,
-    city: "Zakopane",
-    memories: 5,
-  },
-  {
-    id: 2,
-    image: wroclaw,
-    city: "Wrocław",
-    memories: 8,
-  },
-  {
-    id: 3,
-    image: krakow,
-    city: "Kraków",
-    memories: 3,
-  },
-  {
-    id: 4,
-    image: warszawa,
-    city: "Warszawa",
-    memories: 2,
-  },
-];
+import { Link } from "react-router-dom";
+
+import Card from "../../ui/Card/Card";
+
+import memories from "../../../data/memories";
+
+const places = Object.values(
+  memories.reduce((acc, memory) => {
+    const city = memory.location.split(",")[0].trim();
+
+    if (!acc[city]) {
+      acc[city] = {
+        city,
+        image: memory.image,
+        memories: 0,
+      };
+    }
+
+    acc[city].memories++;
+
+    return acc;
+  }, {})
+)
+  .sort((a, b) => b.memories - a.memories)
+  .slice(0, 4);
 
 function PopularPlacesCard() {
   return (
@@ -39,14 +33,11 @@ function PopularPlacesCard() {
       title="Najczęstsze miejsca"
     >
       <ul className="popular-places__list">
-
         {places.map((place) => (
-
           <li
-            key={place.id}
+            key={place.city}
             className="popular-places__item"
           >
-
             <div className="popular-places__image">
               <img
                 src={place.image}
@@ -55,21 +46,19 @@ function PopularPlacesCard() {
             </div>
 
             <div className="popular-places__content">
-
               <h3 className="popular-places__city">
                 {place.city}
               </h3>
 
               <p className="popular-places__count">
-                {place.memories} wspomnień
+                {place.memories}{" "}
+                {place.memories === 1
+                  ? "wspomnienie"
+                  : "wspomnienia"}
               </p>
-
             </div>
-
           </li>
-
         ))}
-
       </ul>
     </Card>
   );

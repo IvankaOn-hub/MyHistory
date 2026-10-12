@@ -86,7 +86,7 @@
 
 @media (min-width: 768px) {
   .memory-card {
-    grid-template-columns: 20rem 1fr auto;
+    grid-template-columns: 18rem 1fr auto;
     align-items: center;
   }
 

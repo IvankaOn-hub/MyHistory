@@ -14,6 +14,7 @@ import {
   faUserGroup,
   faArrowLeft,
   faPen,
+  faArrowUpFromBracket
 } from "@fortawesome/free-solid-svg-icons";
 
 // Regular
@@ -21,6 +22,7 @@ import {
   faHeart as faHeartRegular,
   faCalendarDays,
   faSun,
+  faTrashCan
 } from "@fortawesome/free-regular-svg-icons";
 
 // Brands
@@ -46,6 +48,9 @@ export {
   faUserGroup,
   faArrowLeft,
   faPen,
+  faArrowUpFromBracket,
+
+  faTrashCan,
 
   faHeartRegular,
   faHeartSolid,

@@ -10,7 +10,8 @@
 .timeline__list {
   display: grid;
   gap: var(--space-md);
-  margin-bottom: var(--space-lg);
+  margin-bottom: 4rem;
+
 }
 
 .timeline__item {
@@ -62,7 +63,17 @@
     top: 4.5rem;
     bottom: 2rem;
     width: 2px;
-    background: var(--color-border);
+     background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(216,179,132,.3),
+        rgba(216,179,132,.95),
+        rgba(216,179,132,.3),
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px rgba(216,179,132,.25);
   }
 
 }

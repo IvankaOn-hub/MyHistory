@@ -1,4 +1,5 @@
 import { Link, useParams } from "react-router-dom";
+import Button from "../../components/ui/Button/Button";
 import Container from "../../components/ui/Container/Container";
 import Header from "../../components/features/Header/Header";
 import Footer from "../../components/features/Footer/Footer";
@@ -14,6 +15,8 @@ import {
   faPen,
   faCalendarDays,
   faLocationDot,
+  faArrowUpFromBracket,
+  faTrashCan,
 
 } from "../../assets/icons";
 
@@ -50,7 +53,7 @@ function MemoryPage() {
           className="memory-hero"
           style={{ backgroundImage: `url(${memory.image})` }}
         >
-          <Link className="memory-hero__back" to="/memories">
+          <Link className="memory-hero__back button button__icon" to="/memories">
             <FontAwesomeIcon icon={faArrowLeft} /> Powrót do wspomnień
           </Link>
 
@@ -143,13 +146,18 @@ function MemoryPage() {
             <h2>Galeria</h2>
 
             <div className="memory-gallery__filters">
-              <button className="memory-gallery__filter memory-gallery__filter--active">
+               <Button
+                  
+                  variant="outline"
+                  active="true"
+                >
                 Wszystkie
-              </button>
-
-              <button className="memory-gallery__filter">
+                </Button>
+               <Button
+                  variant="outline"
+                >
                 Tylko zdjęcia
-              </button>
+                </Button>
             </div>
           </div>
 
@@ -182,44 +190,43 @@ function MemoryPage() {
         </section>
 
         <section className="memory-actions">
-        <div className="memory-notes">
-          <div className="memory-notes__header">
-            <h2>Notatki</h2>
-
-            <button
-              className="memory-notes__favorite"
-              type="button"
-              aria-label="Dodaj do ulubionych"
-            >
-            ♡
-            </button>
-          </div>
-
-          <p>
-            To były wyjątkowe urodziny. Zosia była bardzo szczęśliwa z prezentów,
-            a tort z jednorożcem był przepyszny.
-          </p>
-        </div>
+        <Card>
+          <h2>Notatki</h2>
+          <p>{memory.notes}</p>
+        </Card>
 
         <div className="memory-actions__buttons">
-          <button className="memory-actions__button" type="button">
-            ♡ Dodaj do ulubionych
-          </button>
+          <Button
+            icon={<FontAwesomeIcon icon={faHeartRegular} />}
+            variant="primary"
+          >
+           Dodaj do ulubionych
+          </Button>
 
-          <button className="memory-actions__button" type="button">
-            ↓ Pobierz album
-          </button>
+          
+          <Button
+            icon={<FontAwesomeIcon icon={faArrowUpFromBracket} />}
+            variant="primary"
+          >
+           Pobierz album
+        </Button>
 
-          <button className="memory-actions__button memory-actions__button--danger" type="button">
-            🗑 Usuń wspomnienie
-          </button>
+          <Button
+            icon={<FontAwesomeIcon icon={faTrashCan} />}
+            variant="danger"
+          >
+           Usuń wspomnienie
+        </Button>
+
+           
         </div>
       </section>
 
       </article>
     
-      <Footer />
     </Container>
+      <Footer />
+
   </main>
 );
 }

@@ -1,0 +1,33 @@
+.form-field {
+  display: grid;
+  gap: var(--space-xs);
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.form-field__label {
+  color: var(--color-heading);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.form-field__hint {
+  color: var(--color-text);
+  font-size: var(--fs-xs);
+}
+
+.form-field__error {
+  color: var(--color-error);
+  font-size: var(--fs-xs);
+}
+
+.form-field--error .form-control {
+  border-color: var(--color-error);
+}
+
+.form-control--textarea {
+  min-height: 12rem;
+  resize: vertical;
+} 

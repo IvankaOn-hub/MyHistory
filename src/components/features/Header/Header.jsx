@@ -5,6 +5,7 @@ import Navigation from "../Navigation/Navigation";
 import Button from "../../ui/Button/Button";
 import Avatar from "../../ui/Avatar/Avatar";
 import avatarImage from "../../../assets/images/avatar.jpg";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus } from "../../../assets/icons";
 
@@ -26,12 +27,11 @@ function Header() {
       <Navigation isOpen={isMenuOpen} />
 
       <div className="header__actions">
-        <Button
-            icon={<FontAwesomeIcon icon={faPlus} />}
-            variant="primary"
-          >
-            Dodaj wspomnienie
-        </Button>
+        <Link to="/memory/new" className="button button--primary" >
+          <FontAwesomeIcon icon={faPlus} />
+          Dodaj wspomnienie
+        </Link>
+        
 
         <Avatar src={avatarImage} alt="Avatar" size="lg" />
       </div>

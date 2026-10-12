@@ -1,0 +1,160 @@
+
+.memory-form {
+  display: grid;
+  gap: var(--space-lg);
+  max-width: 68rem;
+  margin-inline: auto;
+}
+
+.memory-form__card {
+  padding: var(--space-lg);
+}
+
+.memory-form__grid {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.memory-form__fields {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.memory-form__checkbox {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-heading);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.memory-form__checkbox .form-control {
+  width: auto;
+}
+
+.memory-form__file-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.memory-form__upload {
+  display: block;
+  overflow: hidden;
+  min-height: 20rem;
+  border: 1px dashed var(--color-primary-light);
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+  cursor: pointer;
+}
+
+.memory-form__upload img {
+  width: 100%;
+  min-height: 20rem;
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+}
+
+.memory-form__upload-placeholder {
+  min-height: 20rem;
+
+  display: grid;
+  place-content: center;
+  gap: var(--space-xs);
+
+  text-align: center;
+  color: var(--color-text);
+}
+
+.memory-form__upload-placeholder strong {
+  color: var(--color-primary);
+}
+
+/* .memory-form__media-upload {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 1.2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-background);
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+
+.memory-form__media-upload:hover {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-surface);
+} */
+
+.memory-form__media-grid {
+  display: grid;
+  gap: var(--space-md);
+
+  margin-top: var(--space-lg);
+}
+
+.memory-form__media-item {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-md);
+  background: var(--color-background);
+}
+
+.memory-form__media-item img,
+.memory-form__media-item video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.memory-form__media-item button {
+  position: absolute;
+  top: var(--space-xs);
+  right: var(--space-xs);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: rgba(47, 42, 38, 0.75);
+  color: var(--color-surface);
+  font-size: var(--fs-md);
+  cursor: pointer;
+}
+
+.memory-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 48rem) {
+  .memory-form__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .memory-form__media-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 64rem) {
+  .memory-form__media-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

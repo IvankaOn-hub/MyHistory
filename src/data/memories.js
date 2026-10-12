@@ -14,6 +14,8 @@ export const memories = [
     image: memoryOne,
     description: "Niezapomniany dzień w górach z najlepszymi ludźmi.",
     excerpt: "Widoki, które zostają w pamięci na zawsze.",
+    notes:
+    "To były wyjątkowe urodziny. Zosia była bardzo szczęśliwa z prezentów, a tort z jednorożcem był przepyszny. Wszyscy bawili się do późnego wieczora.",
     isFavorite: true,
     tags: ["tatry", "góry", "wakacje"],
     media: [
@@ -57,6 +59,8 @@ export const memories = [
     image: memoryTwo,
     description: "Dużo radości, prezentów i pysznego tortu.",
     excerpt: "Moja mała księżniczka skończyła 3 latka.",
+    notes:
+    "To były wyjątkowe urodziny. Zosia była bardzo szczęśliwa z prezentów, a tort z jednorożcem był przepyszny. Wszyscy bawili się do późnego wieczora. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
     isFavorite: false,
     tags: ["urodziny", "rodzina", "dziecko"],
     media: [
@@ -100,6 +104,8 @@ export const memories = [
     image: memoryThree,
     description: "Ciepłe popołudnie, dobra książka i domowe przekąski. Ciepłe popołudnie, dobra książka i domowe przekąski. Ciepłe popołudnie, dobra książka i domowe przekąski.",
     excerpt: "Proste chwile są najlepsze.",
+    notes:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
     isFavorite: true,
     tags: ["piknik", "park", "spokój"],
     media: [
@@ -144,6 +150,8 @@ export const memories = [
     image: memoryThree,
     description: "Ciepłe popołudnie, dobra książka i domowe przekąski.",
     excerpt: "Proste chwile są najlepsze.",
+    notes:
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged.",
     isFavorite: false,
     tags: ["piknik", "park", "spokój"],
     media: [

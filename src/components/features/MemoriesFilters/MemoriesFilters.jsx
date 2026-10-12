@@ -1,5 +1,7 @@
 import "./MemoriesFilters.css";
 
+import Input from "../../ui/Input/Input";
+
 function MemoriesFilters({
   search,
   category,
@@ -10,12 +12,18 @@ function MemoriesFilters({
 }) {
   return (
     <div className="memories-filters">
-      <input
+      <Input
         type="search"
         placeholder="Szukaj wspomnienia..."
         value={search}
         onChange={(event) => onSearchChange(event.target.value)}
       />
+      {/* <input
+        type="search"
+        placeholder="Szukaj wspomnienia..."
+        value={search}
+        onChange={(event) => onSearchChange(event.target.value)}
+      /> */}
 
       <select
         value={category}

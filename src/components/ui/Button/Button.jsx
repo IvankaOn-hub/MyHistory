@@ -1,25 +1,38 @@
 import "./Button.css";
 
 function Button({
-    children,
-    icon,
-    variant = "primary",
+  children,
+  icon,
+  variant = "primary",
+  active = false,
+  className = "",
+  ...props
 }) {
-    return (
-        <button
-            className={`button button--${variant}`}
-        >
-            {icon && (
-                <span className="button__icon">
-                    {icon}
-                </span>
-            )}
+  const classNames = [
+    "button",
+    `button--${variant}`,
+    active ? "button--active" : "",
+    className,
+  ]
+    .filter(Boolean)
+    .join(" ");
 
-            <span className="button__label">
-                {children}
-            </span>
-        </button>
-    );
+  return (
+    <button
+      className={classNames}
+      {...props}
+    >
+      {icon && (
+        <span className="button__icon">
+          {icon}
+        </span>
+      )}
+
+      <span className="button__label">
+        {children}
+      </span>
+    </button>
+  );
 }
 
 export default Button;

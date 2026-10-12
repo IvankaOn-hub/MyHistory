@@ -1,6 +1,6 @@
 import "./Footer.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import footerFlower from "../../../assets/images/footer.jpg";
+import Container from "../../ui/Container/Container";
 import {
   faInstagram,
   faPinterest,
@@ -9,10 +9,9 @@ import {
 
 function Footer() {
   return (
-    <footer 
-    className="footer"
-      style={{ "--footer-flower": `url(${footerFlower})` }}
-    >
+    <footer className="footer">
+    <Container>
+
       <p className="footer__copy">
         © 2026 MyHistory. Wszystkie prawa zastrzeżone.
       </p>
@@ -30,6 +29,8 @@ function Footer() {
           <FontAwesomeIcon icon={faFacebook} />
         </a>
       </div>
+    </Container>
+
     </footer>
   );
 }

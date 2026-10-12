@@ -1,26 +1,40 @@
+.avatar-wrapper {
+  position: relative;
+}
+
 .avatar {
   overflow: hidden;
-  border-radius: 50%;
-  border: 2px solid var(--color-surface);
-  box-shadow: var(--shadow-sm);
-  background: var(--color-surface);
   flex-shrink: 0;
+
+  display: grid;
+  place-items: center;
+
+  padding: 0;
+
+  border: 2px solid var(--color-surface);
+  border-radius: 50%;
+
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+
+  cursor: pointer;
+
   transition: var(--transition-default);
 }
 
-.avatar:hover{
-  border-color: var(--color-secondary);
+.avatar:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
 }
 
-
 .avatar--sm {
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .avatar--md {
-  width: 2.75rem;
-  height: 2.75rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .avatar--lg {
@@ -31,6 +45,84 @@
 .avatar__image {
   width: 100%;
   height: 100%;
+
   display: block;
   object-fit: cover;
+}
+
+.avatar__placeholder {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.avatar-menu {
+  position: absolute;
+  top: calc(100% + var(--space-xs));
+  right: 0;
+  z-index: 100;
+
+  width: 14rem;
+  padding: var(--space-xs);
+
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+
+  background: var(--color-surface);
+  box-shadow: var(--shadow-md);
+}
+
+.avatar-menu__user {
+  display: grid;
+  gap: 0.2rem;
+
+  padding: var(--space-sm);
+}
+
+.avatar-menu__user strong {
+  color: var(--color-heading);
+}
+
+.avatar-menu__user span {
+  color: var(--color-text);
+  font-size: var(--fs-xs);
+}
+
+.avatar-menu__divider {
+  height: 1px;
+  margin-block: var(--space-xs);
+
+  background: var(--color-border);
+}
+
+.avatar-menu__item {
+  width: 100%;
+
+  padding: 0.75rem 0.9rem;
+
+  border: none;
+  border-radius: var(--radius-sm);
+
+  background: transparent;
+  color: var(--color-text);
+
+  font: inherit;
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: var(--transition-default);
+}
+
+.avatar-menu__item:hover {
+  background: var(--color-background);
+  color: var(--color-primary);
+}
+
+.avatar-menu__item--danger {
+  color: var(--color-error);
+}
+
+.avatar-menu__item--danger:hover {
+  background: rgba(215, 90, 90, 0.08);
+  color: var(--color-error);
 }

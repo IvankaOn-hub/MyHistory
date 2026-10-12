@@ -94,8 +94,9 @@ function MemoriesPage() {
           </div>
         </section>
 
-        <Footer />
       </Container>
+        <Footer />
+
     </main>
   );
 }
